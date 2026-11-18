@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-labelledby="t d">
+<title id="t">Three outcomes, and only one of them writes data</title>
+<desc id="d">Decision ladder. If the answer is not valid JSON or not in the taxonomy: Failed. If it is the fallback value Other: Needs review. If confidence is at or above the apply threshold: Classified, fields are written with an explanatory comment. Else if at or above the review threshold: Needs review, nothing is written, a suggestion is posted and the bug joins the review queue. Otherwise: Failed, nothing is written and a comment explains the next step.</desc>
+
+<style>
+  svg { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .surface { fill: #fcfcfb; stroke: rgba(11,11,11,0.10); }
+  .ink { fill: #0b0b0b; }
+  .ink2 { fill: #52514e; }
+  .muted { fill: #898781; }
+  .grid { stroke: #e1e0d9; stroke-width: 1; }
+  .axis { stroke: #c3c2b7; stroke-width: 1; }
+  .bar { fill: #2a78d6; }
+  .empty { fill: none; stroke: #c3c2b7; stroke-width: 1.5; stroke-dasharray: 4 4; }
+  .box { fill: #ffffff; stroke: #c3c2b7; stroke-width: 1.25; }
+  .box-accent { fill: #eef4fc; stroke: #2a78d6; stroke-width: 1.25; }
+  .lane { fill: #f3f2ee; }
+  .arrow { stroke: #898781; stroke-width: 1.5; fill: none; }
+  .arrowhead { fill: #898781; }
+  .good { fill: #0ca30c; }
+  .warn { fill: #fab219; }
+  .crit { fill: #d03b3b; }
+  .good-s { stroke: #0ca30c; }
+  .warn-s { stroke: #fab219; }
+  .crit-s { stroke: #d03b3b; }
+  .on-status { fill: #ffffff; }
+  .on-warn { fill: #0b0b0b; }
+  svg { --ring: #fcfcfb; }
+  @media (prefers-color-scheme: dark) {
+    .surface { fill: #1a1a19; stroke: rgba(255,255,255,0.10); }
+    .ink { fill: #f0efec; }
+    .ink2 { fill: #c3c2b7; }
+    .grid { stroke: #2c2c2a; }
+    .axis { stroke: #383835; }
+    .bar { fill: #3987e5; }
+    .empty { stroke: #52514e; }
+    .box { fill: #242423; stroke: #52514e; }
+    .box-accent { fill: #1c2a3b; stroke: #3987e5; }
+    .lane { fill: #212120; }
+    svg { --ring: #1a1a19; }
+  }
+</style>
+<defs>
+  <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path class="arrowhead" d="M0,0 L10,5 L0,10 z"/>
+  </marker>
+</defs>
+
+<rect class="surface" x="0.5" y="0.5" width="899" height="499" rx="12"/>
+<text x="32" y="44" class="ink" font-size="20" font-weight="650" text-anchor="start">Three outcomes, and only one of them writes data</text>
+<text x="32" y="70" class="ink2" font-size="14" font-weight="400" text-anchor="start">Each AI answer goes through the same checks. Area and type are checked separately.</text>
+<rect class="box" x="32" y="104" width="280" height="58" rx="8"/>
+<text x="172.0" y="128" class="ink" font-size="14" font-weight="600" text-anchor="middle">Valid JSON, and the value</text>
+<text x="172.0" y="147" class="ink" font-size="14" font-weight="600" text-anchor="middle">exists in the taxonomy?</text>
+<rect class="box" x="32" y="196" width="280" height="58" rx="8"/>
+<text x="172.0" y="220" class="ink" font-size="14" font-weight="600" text-anchor="middle">Is the answer the fallback</text>
+<text x="172.0" y="239" class="ink" font-size="14" font-weight="600" text-anchor="middle">value “Other”?</text>
+<rect class="box" x="32" y="288" width="280" height="58" rx="8"/>
+<text x="172.0" y="312" class="ink" font-size="14" font-weight="600" text-anchor="middle">Confidence at or above</text>
+<text x="172.0" y="331" class="ink" font-size="14" font-weight="600" text-anchor="middle">the apply threshold?</text>
+<rect class="box" x="32" y="380" width="280" height="58" rx="8"/>
+<text x="172.0" y="404" class="ink" font-size="14" font-weight="600" text-anchor="middle">Confidence at or above</text>
+<text x="172.0" y="423" class="ink" font-size="14" font-weight="600" text-anchor="middle">the review threshold?</text>
+<path class="arrow" d="M172.0,164 L172.0,194" marker-end="url(#ah)"/>
+<text x="182.0" y="184" class="muted" font-size="12" font-weight="400" text-anchor="start">yes</text>
+<path class="arrow" d="M172.0,256 L172.0,286" marker-end="url(#ah)"/>
+<text x="182.0" y="276" class="muted" font-size="12" font-weight="400" text-anchor="start">no</text>
+<path class="arrow" d="M172.0,348 L172.0,378" marker-end="url(#ah)"/>
+<text x="182.0" y="368" class="muted" font-size="12" font-weight="400" text-anchor="start">no</text>
+<path class="arrow" d="M314,133.0 L370,133.0" marker-end="url(#ah)"/>
+<text x="322" y="128.0" class="muted" font-size="12" font-weight="400" text-anchor="start">no</text>
+<rect class="box" x="374" y="118.0" width="150" height="30" rx="15"/>
+<circle class="crit" cx="389" cy="133.0" r="10"/>
+<text x="389" y="137.5" class="on-status" font-size="12" font-weight="700" text-anchor="middle">×</text>
+<text x="406" y="138.0" class="ink" font-size="13" font-weight="600" text-anchor="start">Failed</text>
+<path class="arrow" d="M314,225.0 L370,225.0" marker-end="url(#ah)"/>
+<text x="322" y="220.0" class="muted" font-size="12" font-weight="400" text-anchor="start">yes</text>
+<rect class="box" x="374" y="210.0" width="150" height="30" rx="15"/>
+<circle class="warn" cx="389" cy="225.0" r="10"/>
+<text x="389" y="229.5" class="on-warn" font-size="12" font-weight="700" text-anchor="middle">!</text>
+<text x="406" y="230.0" class="ink" font-size="13" font-weight="600" text-anchor="start">Needs review</text>
+<path class="arrow" d="M314,317.0 L370,317.0" marker-end="url(#ah)"/>
+<text x="322" y="312.0" class="muted" font-size="12" font-weight="400" text-anchor="start">yes</text>
+<rect class="box" x="374" y="302.0" width="150" height="30" rx="15"/>
+<circle class="good" cx="389" cy="317.0" r="10"/>
+<text x="389" y="321.5" class="on-status" font-size="12" font-weight="700" text-anchor="middle">✓</text>
+<text x="406" y="322.0" class="ink" font-size="13" font-weight="600" text-anchor="start">Classified</text>
+<path class="arrow" d="M314,388 L370,388" marker-end="url(#ah)"/>
+<text x="322" y="383" class="muted" font-size="12" font-weight="400" text-anchor="start">yes</text>
+<rect class="box" x="374" y="373" width="150" height="30" rx="15"/>
+<circle class="warn" cx="389" cy="388" r="10"/>
+<text x="389" y="392.5" class="on-warn" font-size="12" font-weight="700" text-anchor="middle">!</text>
+<text x="406" y="393" class="ink" font-size="13" font-weight="600" text-anchor="start">Needs review</text>
+<path class="arrow" d="M314,434 L370,434" marker-end="url(#ah)"/>
+<text x="322" y="429" class="muted" font-size="12" font-weight="400" text-anchor="start">no</text>
+<rect class="box" x="374" y="419" width="150" height="30" rx="15"/>
+<circle class="crit" cx="389" cy="434" r="10"/>
+<text x="389" y="438.5" class="on-status" font-size="12" font-weight="700" text-anchor="middle">×</text>
+<text x="406" y="439" class="ink" font-size="13" font-weight="600" text-anchor="start">Failed</text>
+<rect class="box" x="540" y="112" width="328" height="104" rx="10"/>
+<rect class="good" x="540" y="112" width="8" height="104" rx="4"/>
+<circle class="good" cx="576" cy="142" r="13"/>
+<text x="576" y="147" class="on-status" font-size="15" font-weight="700" text-anchor="middle">✓</text>
+<text x="600" y="148" class="ink" font-size="16" font-weight="650" text-anchor="start">Classified</text>
+<text x="564" y="178" class="ink2" font-size="13" font-weight="400" text-anchor="start">The fields are written, and a</text>
+<text x="564" y="196" class="ink2" font-size="13" font-weight="400" text-anchor="start">comment explains the choice.</text>
+<rect class="box" x="540" y="232" width="328" height="104" rx="10"/>
+<rect class="warn" x="540" y="232" width="8" height="104" rx="4"/>
+<circle class="warn" cx="576" cy="262" r="13"/>
+<text x="576" y="267" class="on-warn" font-size="15" font-weight="700" text-anchor="middle">!</text>
+<text x="600" y="268" class="ink" font-size="16" font-weight="650" text-anchor="start">Needs review</text>
+<text x="564" y="298" class="ink2" font-size="13" font-weight="400" text-anchor="start">Nothing is written. A suggestion</text>
+<text x="564" y="316" class="ink2" font-size="13" font-weight="400" text-anchor="start">is posted for a person to confirm.</text>
+<rect class="box" x="540" y="352" width="328" height="104" rx="10"/>
+<rect class="crit" x="540" y="352" width="8" height="104" rx="4"/>
+<circle class="crit" cx="576" cy="382" r="13"/>
+<text x="576" y="387" class="on-status" font-size="15" font-weight="700" text-anchor="middle">×</text>
+<text x="600" y="388" class="ink" font-size="16" font-weight="650" text-anchor="start">Failed</text>
+<text x="564" y="418" class="ink2" font-size="13" font-weight="400" text-anchor="start">Nothing is written. A comment says:</text>
+<text x="564" y="436" class="ink2" font-size="13" font-weight="400" text-anchor="start">add detail and retry, or tag by hand.</text>
+<text x="32" y="482" class="muted" font-size="12" font-weight="400" text-anchor="start">The backfill only sends bugs that have no classification yet. Thresholds are illustrative, set from a calibration check.</text>
+</svg>

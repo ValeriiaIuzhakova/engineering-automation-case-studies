@@ -1,0 +1,12 @@
+Taxonomy v7  |  apply >= 0.9  review >= 0.7
+
+Ticket     Outcome                     Area               Type
+------------------------------------------------------------------------------
+DEMO-101   skipped_already_processed   None               None
+DEMO-102   skipped_already_processed   None               None
+DEMO-103   skipped_already_processed   None               None
+DEMO-104   skipped_already_processed   None               None
+DEMO-105   skipped_human_classified    Billing            None
+DEMO-106   skipped_already_processed   None               None
+
+Model calls this run: 0   Audit log: out/audit.jsonl

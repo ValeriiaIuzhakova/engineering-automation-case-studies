@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" role="img" aria-labelledby="t d">
+<title id="t">How a new bug gets classified</title>
+<desc id="d">Four stages left to right. Trigger: a new bug is filed, an automation rule adds a trigger label, the workflow starts and skips bugs already done. Classify: read the versioned taxonomy, AI step 1 picks the product area, AI step 2 picks the failure type. Check: validate strictly, compare confidence with thresholds, pick one outcome. Record and use: comment on the bug explaining why, write an audit log row, and the team reviews bug clusters weekly.</desc>
+
+<style>
+  svg { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .surface { fill: #fcfcfb; stroke: rgba(11,11,11,0.10); }
+  .ink { fill: #0b0b0b; }
+  .ink2 { fill: #52514e; }
+  .muted { fill: #898781; }
+  .grid { stroke: #e1e0d9; stroke-width: 1; }
+  .axis { stroke: #c3c2b7; stroke-width: 1; }
+  .bar { fill: #2a78d6; }
+  .empty { fill: none; stroke: #c3c2b7; stroke-width: 1.5; stroke-dasharray: 4 4; }
+  .box { fill: #ffffff; stroke: #c3c2b7; stroke-width: 1.25; }
+  .box-accent { fill: #eef4fc; stroke: #2a78d6; stroke-width: 1.25; }
+  .lane { fill: #f3f2ee; }
+  .arrow { stroke: #898781; stroke-width: 1.5; fill: none; }
+  .arrowhead { fill: #898781; }
+  .good { fill: #0ca30c; }
+  .warn { fill: #fab219; }
+  .crit { fill: #d03b3b; }
+  .good-s { stroke: #0ca30c; }
+  .warn-s { stroke: #fab219; }
+  .crit-s { stroke: #d03b3b; }
+  .on-status { fill: #ffffff; }
+  .on-warn { fill: #0b0b0b; }
+  svg { --ring: #fcfcfb; }
+  @media (prefers-color-scheme: dark) {
+    .surface { fill: #1a1a19; stroke: rgba(255,255,255,0.10); }
+    .ink { fill: #f0efec; }
+    .ink2 { fill: #c3c2b7; }
+    .grid { stroke: #2c2c2a; }
+    .axis { stroke: #383835; }
+    .bar { fill: #3987e5; }
+    .empty { stroke: #52514e; }
+    .box { fill: #242423; stroke: #52514e; }
+    .box-accent { fill: #1c2a3b; stroke: #3987e5; }
+    .lane { fill: #212120; }
+    svg { --ring: #1a1a19; }
+  }
+</style>
+<defs>
+  <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path class="arrowhead" d="M0,0 L10,5 L0,10 z"/>
+  </marker>
+</defs>
+
+<rect class="surface" x="0.5" y="0.5" width="899" height="439" rx="12"/>
+<text x="32" y="44" class="ink" font-size="20" font-weight="650" text-anchor="start">How a new bug gets classified</text>
+<text x="32" y="70" class="ink2" font-size="14" font-weight="400" text-anchor="start">One run per bug. Every run ends with a comment on the bug and a row in the audit log.</text>
+<rect class="lane" x="32" y="96" width="196" height="288" rx="10"/>
+<text x="46" y="122" class="ink" font-size="14" font-weight="650" text-anchor="start">1  Trigger</text>
+<rect class="box" x="44" y="140" width="172" height="64" rx="8"/>
+<text x="130.0" y="167" class="ink" font-size="14" font-weight="600" text-anchor="middle">New bug</text>
+<text x="130.0" y="186" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">is filed</text>
+<path class="arrow" d="M130.0,206 L130.0,220" marker-end="url(#ah)"/>
+<rect class="box" x="44" y="222" width="172" height="64" rx="8"/>
+<text x="130.0" y="249" class="ink" font-size="14" font-weight="600" text-anchor="middle">Automation rule</text>
+<text x="130.0" y="268" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">adds a trigger label</text>
+<path class="arrow" d="M130.0,288 L130.0,302" marker-end="url(#ah)"/>
+<rect class="box" x="44" y="304" width="172" height="64" rx="8"/>
+<text x="130.0" y="331" class="ink" font-size="14" font-weight="600" text-anchor="middle">Workflow starts</text>
+<text x="130.0" y="350" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">(skips bugs already done)</text>
+<path class="arrow" d="M218,336.0 H238.0 V172.0 H258" marker-end="url(#ah)"/>
+<rect class="lane" x="248" y="96" width="196" height="288" rx="10"/>
+<text x="262" y="122" class="ink" font-size="14" font-weight="650" text-anchor="start">2  Classify</text>
+<rect class="box" x="260" y="140" width="172" height="64" rx="8"/>
+<text x="346.0" y="167" class="ink" font-size="14" font-weight="600" text-anchor="middle">Read the taxonomy</text>
+<text x="346.0" y="186" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">(versioned wiki page)</text>
+<path class="arrow" d="M346.0,206 L346.0,220" marker-end="url(#ah)"/>
+<rect class="box-accent" x="260" y="222" width="172" height="64" rx="8"/>
+<text x="346.0" y="249" class="ink" font-size="14" font-weight="600" text-anchor="middle">AI step 1:</text>
+<text x="346.0" y="268" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">product area</text>
+<path class="arrow" d="M346.0,288 L346.0,302" marker-end="url(#ah)"/>
+<rect class="box-accent" x="260" y="304" width="172" height="64" rx="8"/>
+<text x="346.0" y="331" class="ink" font-size="14" font-weight="600" text-anchor="middle">AI step 2:</text>
+<text x="346.0" y="350" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">failure type</text>
+<path class="arrow" d="M434,336.0 H454.0 V172.0 H474" marker-end="url(#ah)"/>
+<rect class="lane" x="464" y="96" width="196" height="288" rx="10"/>
+<text x="478" y="122" class="ink" font-size="14" font-weight="650" text-anchor="start">3  Check</text>
+<rect class="box" x="476" y="140" width="172" height="64" rx="8"/>
+<text x="562.0" y="167" class="ink" font-size="14" font-weight="600" text-anchor="middle">Validate strictly</text>
+<text x="562.0" y="186" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">(no near-misses)</text>
+<path class="arrow" d="M562.0,206 L562.0,220" marker-end="url(#ah)"/>
+<rect class="box" x="476" y="222" width="172" height="64" rx="8"/>
+<text x="562.0" y="249" class="ink" font-size="14" font-weight="600" text-anchor="middle">Compare confidence</text>
+<text x="562.0" y="268" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">with thresholds</text>
+<path class="arrow" d="M562.0,288 L562.0,302" marker-end="url(#ah)"/>
+<rect class="box" x="476" y="304" width="172" height="64" rx="8"/>
+<text x="562.0" y="331" class="ink" font-size="14" font-weight="600" text-anchor="middle">Pick one outcome</text>
+<text x="562.0" y="350" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">(see next diagram)</text>
+<path class="arrow" d="M650,336.0 H670.0 V172.0 H690" marker-end="url(#ah)"/>
+<rect class="lane" x="680" y="96" width="196" height="288" rx="10"/>
+<text x="694" y="122" class="ink" font-size="14" font-weight="650" text-anchor="start">4  Record &amp; use</text>
+<rect class="box" x="692" y="140" width="172" height="64" rx="8"/>
+<text x="778.0" y="167" class="ink" font-size="14" font-weight="600" text-anchor="middle">Comment on the bug</text>
+<text x="778.0" y="186" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">explaining why</text>
+<path class="arrow" d="M778.0,206 L778.0,220" marker-end="url(#ah)"/>
+<rect class="box" x="692" y="222" width="172" height="64" rx="8"/>
+<text x="778.0" y="249" class="ink" font-size="14" font-weight="600" text-anchor="middle">Audit log row</text>
+<text x="778.0" y="268" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">(inputs + version)</text>
+<path class="arrow" d="M778.0,288 L778.0,302" marker-end="url(#ah)"/>
+<rect class="box" x="692" y="304" width="172" height="64" rx="8"/>
+<text x="778.0" y="331" class="ink" font-size="14" font-weight="600" text-anchor="middle">Weekly review</text>
+<text x="778.0" y="350" class="ink2" font-size="12.5" font-weight="400" text-anchor="middle">of bug clusters</text>
+<text x="32" y="420" class="muted" font-size="12" font-weight="400" text-anchor="start">Simplified, conceptual view. Generic component names; not the production configuration.</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "_note": "SYNTHETIC taxonomy for a fictional project-management app. Not derived from any real product taxonomy.",
+  "version": "v7",
+  "problem_areas": [
+    {"name": "Boards & Cards", "description": "Creating, moving, or editing cards and columns on a board."},
+    {"name": "Calendar Sync", "description": "Two-way sync between tasks and external calendars."},
+    {"name": "Notifications", "description": "In-app, email, or push notifications: delivery, timing, content."},
+    {"name": "Search", "description": "Global search and filters: missing, stale, or wrong results."},
+    {"name": "Import & Export", "description": "CSV/XLSX import, export files, and migration tools."},
+    {"name": "Billing", "description": "Plans, invoices, seat counts, and payment flows."},
+    {"name": "Other (Needs Classification)", "description": "Fallback when no area fits. Never auto-applied."}
+  ],
+  "problem_types": [
+    {"name": "Functional Defect", "description": "A feature does not behave as specified."},
+    {"name": "Regression", "description": "Behaviour that previously worked is broken after a change."},
+    {"name": "Performance", "description": "Slowness, timeouts, or excessive resource use."},
+    {"name": "Data Integrity", "description": "Data is lost, duplicated, or inconsistent between views."},
+    {"name": "Integration", "description": "Failure at a boundary with a third-party system."},
+    {"name": "Permissions", "description": "A user can see or do something they should not, or vice versa."},
+    {"name": "Other", "description": "Fallback when no type fits. Never auto-applied."}
+  ]
+}

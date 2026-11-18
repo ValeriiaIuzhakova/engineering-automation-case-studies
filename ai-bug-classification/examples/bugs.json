@@ -1,0 +1,38 @@
+{
+  "_note": "SYNTHETIC tickets. Keys, text, and people are fictional.",
+  "tickets": [
+    {
+      "key": "DEMO-101",
+      "summary": "Dragging a card to another column reverts after refresh",
+      "description": "Since last Tuesday's release, moving a card between columns looks fine but the card is back in the old column after reload. Worked before the release."
+    },
+    {
+      "key": "DEMO-102",
+      "summary": "Events created in the app never appear in external calendar",
+      "description": "Two-way sync is enabled. New tasks with due dates do not show up in the connected calendar. Calendar provider returns 403 in the sync log."
+    },
+    {
+      "key": "DEMO-103",
+      "summary": "Search is slow",
+      "description": "Search takes a while sometimes."
+    },
+    {
+      "key": "DEMO-104",
+      "summary": "Exported CSV drops rows with commas in the title",
+      "description": "Exporting a board with 200 cards yields a CSV with 187 rows. Missing rows all have a comma in the card title."
+    },
+    {
+      "key": "DEMO-105",
+      "summary": "Invoice shows wrong seat count",
+      "description": "Billing page says 12 seats, invoice says 14.",
+      "problem_area": "Billing",
+      "problem_type": null,
+      "_comment": "A person already set the area by hand. The pipeline must not touch this ticket."
+    },
+    {
+      "key": "DEMO-106",
+      "summary": "Mention notification arrives twice",
+      "description": "When someone @mentions me on a card I get two identical emails a few seconds apart."
+    }
+  ]
+}

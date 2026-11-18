@@ -1,0 +1,12 @@
+Taxonomy v7  |  apply >= 0.9  review >= 0.7
+
+Ticket     Outcome                     Area               Type
+------------------------------------------------------------------------------
+DEMO-101   auto_apply                  Boards & Cards     Regression
+DEMO-102   auto_apply                  Calendar Sync      Integration
+DEMO-103   not_classified              None               None
+DEMO-104   needs_review                None               None
+DEMO-105   skipped_human_classified    Billing            None
+DEMO-106   not_classified              None               None
+
+Model calls this run: 13   Audit log: out/audit.jsonl

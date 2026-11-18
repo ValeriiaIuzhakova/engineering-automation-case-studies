@@ -1,0 +1,75 @@
+{
+  "idempotency_key": "78ab5f95805064cd",
+  "ticket": "DEMO-101",
+  "at": "2026-11-18T00:14:03+00:00",
+  "model": "scripted-demo-model",
+  "taxonomy_version": "v7",
+  "area": {
+    "value": "Boards & Cards",
+    "confidence": 0.95,
+    "reasoning": "Card moves between columns.",
+    "attempts": 1,
+    "error": null
+  },
+  "type": {
+    "value": "Regression",
+    "confidence": 0.93,
+    "reasoning": "Reporter says it worked before a release.",
+    "attempts": 1,
+    "error": null
+  },
+  "outcome": "auto_apply",
+  "fields_written": {
+    "problem_area": "Boards & Cards",
+    "problem_type": "Regression"
+  }
+}
+{
+  "idempotency_key": "aa3988bcff7c8956",
+  "ticket": "DEMO-102",
+  "at": "2026-11-18T00:14:03+00:00",
+  "model": "scripted-demo-model",
+  "taxonomy_version": "v7",
+  "area": {
+    "value": "Calendar Sync",
+    "confidence": 0.94,
+    "reasoning": "Sync to an external calendar.",
+    "attempts": 1,
+    "error": null
+  },
+  "type": {
+    "value": "Integration",
+    "confidence": 0.91,
+    "reasoning": "Provider returns 403 at the boundary.",
+    "attempts": 2,
+    "error": null
+  },
+  "outcome": "auto_apply",
+  "fields_written": {
+    "problem_area": "Calendar Sync",
+    "problem_type": "Integration"
+  }
+}
+{
+  "idempotency_key": "d6cda841271f0277",
+  "ticket": "DEMO-103",
+  "at": "2026-11-18T00:14:03+00:00",
+  "model": "scripted-demo-model",
+  "taxonomy_version": "v7",
+  "area": {
+    "value": "Search",
+    "confidence": 0.62,
+    "reasoning": "Mentions search but no specifics.",
+    "attempts": 1,
+    "error": null
+  },
+  "type": {
+    "value": "Performance",
+    "confidence": 0.55,
+    "reasoning": "Says slow, but no timings or scope.",
+    "attempts": 1,
+    "error": null
+  },
+  "outcome": "not_classified",
+  "fields_written": {}
+}

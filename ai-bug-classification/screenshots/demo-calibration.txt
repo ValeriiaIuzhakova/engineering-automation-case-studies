@@ -1,0 +1,14 @@
+Sample A (synthetic, well calibrated)
+  0.0-0.7   n=3   accuracy=33%
+  0.7-0.8   n=3   accuracy=67%
+  0.8-0.9   n=3   accuracy=67%
+  0.9-1.0   n=4   accuracy=100%
+  -> confidence is usable as a gate
+
+Sample B (synthetic, flat: everything reported at 0.86-0.97)
+  0.0-0.7   n=0   accuracy=  -  
+  0.7-0.8   n=0   accuracy=  -  
+  0.8-0.9   n=4   accuracy=75%
+  0.9-1.0   n=8   accuracy=62%
+  -> confidence is NOT informative - do not gate on it
+
